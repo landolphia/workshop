@@ -1,9 +1,14 @@
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>The recursive workshop</title>
 	<link href="https://fonts.googleapis.com/css?family=Nunito:400,800|Oswald:400,700" rel="stylesheet">
 </head>
 
 <body>
+	{{>Template.dynamic template=main}}
+</body>
+
+<template name="home">
 	<div class="centered">
 		<div id="container">
 			<h1>Workshop</h1>
@@ -12,5 +17,36 @@
 			<p> If you are curious to see where this is headed come back every once in a while, you might even find something you like. </p>
 			<p class="bottom">Entropy is a bitch<br/>~landolphia</p>
 		</div>
+	{{> footer}}
 	</div>
-</body>
+</template>
+
+<template name="game">
+	<div class="centered">
+		<div id="container">
+			<h1>Game</h1>
+			<p>This will be the game</p>
+		</div>
+	{{> footer}}
+	</div>
+</template>
+
+<template name="404">
+	<div class="centered">
+		<div id="container">
+			<h1>404</h1>
+			<p>There's nothing here.</p>
+		</div>
+	{{> footer}}
+	</div>
+</template>
+
+<template name="footer">
+	<footer>
+		<p>
+		<a href="/">Home</a> . 
+		<a href="/game">Game</a> . 
+		<a href="/404">404</a>
+		</p>
+	</footer>
+</template>
